@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+{%block body%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <p>Daniel Marcial Y Jesus Arias</p>
+  {{ dropzone.load_css() }}
+  {{ dropzone.load_js() }}  
+  <head>
+    {{ dropzone.style('border: 2px dashed #0087F7; margin: 10%; min-height: 100px;') }}
+    </head>
+
+</nav>
+
+
+
+<form action="/upload" class="dropzone" method ="POST" enctype="multipart/form-data">
+  <div class="fallback">
+    <input name="file" type="file" id = "file"  >
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Subir</button>
+</form>
+<P></P>
+<P></P>
+  {%endblock%}
